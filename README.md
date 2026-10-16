@@ -18,16 +18,16 @@ that stops that from reaching the microphone.
 
 ```
 OBS capture window ─► screen capture ─► OCR on the bottom strip ─► screen type + scoreboard ─► event tracker
-                                                                         │                      (score, recap,
-                                                                         │                       quarter end, kickoff)
-              vision model: "what is happening" + a box per player      │                          │
-                         │                                              │                          │
+                                                                    │                      (score, recap,
+                                                                    │                       quarter end, kickoff)
+              vision model: "what is happening" + box               │                          │
+                         │                                          │                          │____|
    team from uniform pixels ─► zoomed re-read of the number ─► roster lookup                        │
                          └──────────────────────────► writer model ◄────────────────────────────────┘
                                                          │
                        word/number/down guards ─► fact-check pass ─► (safe template if rejected)
                                                          │
-                                         dead-air filler ─┘ ─► streaming local text-to-speech
+                                         dead-air filler─┘ ─► streaming local text-to-speech
 ```
 
 | Stage | What it uses | Runs on |
@@ -128,6 +128,7 @@ GPU, model, OBS or audio device.
 - The commentary reacts to plays rather than keeping pace with them: roughly 6 to 10 seconds behind on frame-based lines.
 - The lighting test used simulated weather on real frames, not real rain, snow or night games.
 - Screen capture reads on-screen pixels, so other windows covering the projector window end up in the picture.
+- Limitations on GPU power (the RTX 4070 is a powerful card with 12gb of VRAM and 8448 CUDA Cores) but this still pushes the limits of the GPU and the CPU of an AMD 5800x CPU
 
 ## Disclaimer
 
