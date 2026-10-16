@@ -1,0 +1,7 @@
+{
+  "_comment": "Copy to overrides.json. An entry REPLACES the website roster for that team + number (the game leaves out players who didn't sign NIL deals, or numbers differ).",
+  "akron": {
+    "7": {"name": "Example Player", "pos": "QB"}
+  },
+  "msu": {}
+}

@@ -1,0 +1,16 @@
+venv/
+.venv/
+__pycache__/
+*.pyc
+# game screenshots and debug output (the game footage is not mine to publish)
+screens/
+debug/
+capture_test.png
+live_check.png
+expected.json
+# fetched roster data (re-create with fetch_rosters.py) and personal overrides
+rosters/akron.json
+rosters/msu.json
+rosters/overrides.json
+.env
+*.wav
